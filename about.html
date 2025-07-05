@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Vortek Construction</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="banner.js" defer></script>
+</head>
+<body>
+<div id="banner-placeholder"></div>
+<div class="services-nav">
+  <button onclick="document.getElementById('our-story').scrollIntoView({behavior: 'smooth'})">Our Story</button>
+</div>
+<hr>
+<section id="business-motto" style="text-align:center;">
+  <p>VORTEK CONSTRUCTION is a full service construction company offering General Contracting & Renovations, Mould & Asbestos Abatement and Remediation. Our team ensures that not only are we providing quality workmanship and value at an effective cost, but we are also building a trusting partnership with our clients.</p>
+  <img src="images/Vortek Services Renovations.png" alt="Vortek Services Renovations" style="max-width: 420px; width: 100%; height: auto; margin: 24px auto 0 auto; display: block;" />
+</section>
+<hr>
+<section id="our-story" style="font-weight:400;">
+  <h2 style="font-weight:500;">Our Story</h2>
+  <p style="font-weight:400;">Vortek Construction Ltd. was started in BC in 2007 and has become a well established company in the St. Albert & Edmonton area since 2009. Chris Bargy, the Owner/Operator of Vortek Construction, was born and raised in BC and jump started his experience and carpentry career by helping his father, who operates a successful home building company in BC. After working in the industry and completing his Red Seal Journeyman Carpentry certification, Chris maintained dedication to the construction and carpentry industry with continued growth of Vortek Construction as a renovation and general contracting company.</p>
+  <p style="font-weight:400;">After years of working with homeowners and with many home builder warranty departments, we began to see ongoing issues with some building practises regarding building envelopes. After continually diagnosing and effectively remediating these issues for home warranty, our company decided to take it one step further by offering our experience and expertise in the field of mould abatement and further more to asbestos abatement to homeowners directly.</p>
+  <p style="font-weight:400;">We continue to work with many reputable home builders, business professionals such as Realtors and commerical property owners, housing co-ops and mainly homeowners in our communities.</p>
+  <p style="font-weight:400;">As a small business of under 10 employees, we ensure and believe that each employee contributes directly to the growth and success of the company. Our team at Vortek Construction offers extensive knowledge in the industry, with the combined experiences of both Apprentice and Journeyman Carpenters. We are a team of motivated individuals and dependable professionals for our clients before, during, and after our services are provided.</p>
+</section>
+<hr>
+<section id="work-with-us" style="text-align:center;">
+  <h2>Work With Us</h2>
+  <blockquote style="margin-left:auto;margin-right:auto;font-style:italic;text-align:center;">‘The key to a successful project is good preparation.‘</blockquote>
+  <p><a class="contact-btn" href="contact.html" style="display:inline-block;margin-left:auto;margin-right:auto;">Contact</a></p>
+</section>
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" title="Back to top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="11" fill="#2b6cb0"/><polyline points="8 13 12 9 16 13"/><line x1="12" y1="9" x2="12" y2="17"/></svg>
+</button>
+<script>
+window.addEventListener('scroll', function() {
+  var btn = document.getElementById('scrollToTopBtn');
+  if (!btn) return;
+  if (window.scrollY > 200) {
+    btn.style.display = 'flex';
+  } else {
+    btn.style.display = 'none';
+  }
+});
+</script>
+</body>
+<!-- Site-wide Bottom Banner -->
+    <footer class="site-bottom-banner">
+      <div class="bottom-banner-content">
+        <div class="bottom-banner-title">VORTEK CONSTRUCTION LTD.</div>
+        <div class="bottom-banner-desc">Providing construction services and building trusted relationships in Edmonton, St. Albert and surrounding areas since 2009.</div>
+        <img src="images/house-only.svg" alt="House Icon" class="bottom-banner-house-icon" style="margin: 18px auto 0 auto; display: block; max-width: 160px; width: 100%; height: auto;" />
+        <div class="bottom-banner-services">
+          <span>GENERAL CONTRACTING</span>
+          <span>RENOVATIONS</span>
+          <span>ABATEMENT &amp; RESTORATION</span>
+        </div>
+        <div class="bottom-banner-social">
+          <a href="https://www.facebook.com/Vortek-Construction-Ltd-149174255121641/" target="_blank" aria-label="Facebook" class="social-btn">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="16" fill="#000"/>
+              <path d="M21.333 16.001h-3.111v8h-3.555v-8h-1.778v-3.111h1.778v-1.555c0-2.222 1.111-3.555 3.555-3.555h2.222v3.111h-1.333c-.666 0-.889.222-.889.889v1.111h2.222l-.222 3.111z" fill="#fff"/>
+            </svg>
+            <span class="social-label">Facebook</span>
+          </a>
+          <a href="https://www.instagram.com/vortek_construction/?hl=en" target="_blank" aria-label="Instagram" class="social-btn">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="16" fill="#000"/>
+              <rect x="10" y="10" width="12" height="12" rx="4" fill="#fff"/>
+              <circle cx="16" cy="16" r="3.2" fill="#000"/>
+              <circle cx="21.2" cy="12.8" r="1" fill="#000"/>
+            </svg>
+            <span class="social-label">Instagram</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+</html>

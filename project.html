@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Vortek Construction</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="banner.js" defer></script>
+</head>
+<body>
+<div id="banner-placeholder"></div>
+<!-- Project Gallery Section -->
+<section class="project-gallery-section">
+  <h2 class="project-gallery-title">Project Gallery</h2>
+  <div class="project-gallery-grid">
+    <div class="project-img-placeholder"><img src="project/1.png" alt="Project 1" onclick="openModal('project/1.png')" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;cursor:pointer;"></div>
+    <div class="project-img-placeholder"><img src="project/2.png" alt="Project 2" onclick="openModal('project/2.png')" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;cursor:pointer;"></div>
+    <div class="project-img-placeholder"><img src="project/3.png" alt="Project 3" onclick="openModal('project/3.png')" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;cursor:pointer;"></div>
+    <div class="project-img-placeholder"><img src="project/4.png" alt="Project 4" onclick="openModal('project/4.png')" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;cursor:pointer;"></div>
+    <div class="project-img-placeholder"><img src="project/5.png" alt="Project 5" onclick="openModal('project/5.png')" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;cursor:pointer;"></div>
+    <div class="project-img-placeholder"><img src="project/6.png" alt="Project 6" onclick="openModal('project/6.png')" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;cursor:pointer;"></div>
+    <div class="project-img-placeholder"><img src="project/7.png" alt="Project 7" onclick="openModal('project/7.png')" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;cursor:pointer;"></div>
+    <div class="project-img-placeholder"><img src="project/8.png" alt="Project 8" onclick="openModal('project/8.png')" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;cursor:pointer;"></div>
+    <div class="project-img-placeholder"><img src="project/9.png" alt="Project 9" onclick="openModal('project/9.png')" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;cursor:pointer;"></div>
+    <div class="project-img-placeholder"><img src="project/10.png" alt="Project 10" onclick="openModal('project/10.png')" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;cursor:pointer;"></div>
+    <div class="project-img-placeholder"><img src="project/11.png" alt="Project 11" onclick="openModal('project/11.png')" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;cursor:pointer;"></div>
+    <div class="project-img-placeholder"><img src="project/12.png" alt="Project 12" onclick="openModal('project/12.png')" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;cursor:pointer;"></div>
+    <div class="project-img-placeholder"><img src="project/13.png" alt="Project 13" onclick="openModal('project/13.png')" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;cursor:pointer;"></div>
+  </div>
+  <!-- Modal for full-size image -->
+  <div id="imgModal" class="modal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;">
+    <span onclick="closeModal()" style="position:absolute;top:32px;right:48px;font-size:3rem;color:#fff;cursor:pointer;z-index:10001;">&times;</span>
+    <img id="modalImg" src="" alt="Full Size" style="max-width:90vw;max-height:90vh;border-radius:18px;box-shadow:0 4px 32px rgba(0,0,0,0.25);display:block;margin:auto;">
+  </div>
+  <script>
+  function openModal(src) {
+    document.getElementById('imgModal').style.display = 'flex';
+    document.getElementById('modalImg').src = src;
+  }
+  function closeModal() {
+    document.getElementById('imgModal').style.display = 'none';
+    document.getElementById('modalImg').src = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+  document.getElementById('imgModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+  </script>
+</section>
+<!-- Site-wide Bottom Banner -->
+    <footer class="site-bottom-banner">
+      <div class="bottom-banner-content">
+        <div class="bottom-banner-title">VORTEK CONSTRUCTION LTD.</div>
+        <div class="bottom-banner-desc">Providing construction services and building trusted relationships in Edmonton, St. Albert and surrounding areas since 2009.</div>
+        <img src="images/house-only.svg" alt="House Icon" class="bottom-banner-house-icon" style="margin: 18px auto 0 auto; display: block; max-width: 160px; width: 100%; height: auto;" />
+        <div class="bottom-banner-services">
+          <span>GENERAL CONTRACTING</span>
+          <span>RENOVATIONS</span>
+          <span>ABATEMENT &amp; RESTORATION</span>
+        </div>
+        <div class="bottom-banner-social">
+          <a href="https://www.facebook.com/Vortek-Construction-Ltd-149174255121641/" target="_blank" aria-label="Facebook" class="social-btn">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="16" fill="#000"/>
+              <path d="M21.333 16.001h-3.111v8h-3.555v-8h-1.778v-3.111h1.778v-1.555c0-2.222 1.111-3.555 3.555-3.555h2.222v3.111h-1.333c-.666 0-.889.222-.889.889v1.111h2.222l-.222 3.111z" fill="#fff"/>
+            </svg>
+            <span class="social-label">Facebook</span>
+          </a>
+          <a href="https://www.instagram.com/vortek_construction/?hl=en" target="_blank" aria-label="Instagram" class="social-btn">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="16" fill="#000"/>
+              <rect x="10" y="10" width="12" height="12" rx="4" fill="#fff"/>
+              <circle cx="16" cy="16" r="3.2" fill="#000"/>
+              <circle cx="21.2" cy="12.8" r="1" fill="#000"/>
+            </svg>
+            <span class="social-label">Instagram</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
