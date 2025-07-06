@@ -106,7 +106,7 @@
       <div class="recent-projects-gallery">
         <div class="project-img-placeholder"><img src="project/1.png" alt="Recent Project 1" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;"></div>
         <div class="project-img-placeholder"><img src="project/8.png" alt="Recent Project 2" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;"></div>
-        <div class="project-img-placeholder"><img src="project/12.png" alt="Recent Project 3" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;"></div>
+        <div class="project-img-placeholder"><img src="project/13.png" alt="Recent Project 3" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;"></div>
       </div>
       <a class="view-more-btn" href="project.html">View More</a>
     </section>
@@ -138,6 +138,12 @@
           <span>GENERAL CONTRACTING</span>
           <span>RENOVATIONS</span>
           <span>ABATEMENT &amp; RESTORATION</span>
+        </div>
+        <div class="bottom-banner-nav">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
         </div>
         <div class="bottom-banner-social">
           <a href="https://www.facebook.com/Vortek-Construction-Ltd-149174255121641/" target="_blank" aria-label="Facebook" class="social-btn">
@@ -177,6 +183,8 @@ window.addEventListener('DOMContentLoaded', function() {
   var duration = 1800; // ms
   var start = 0;
   var startTime = null;
+  var hasAnimated = false;
+
   function animateCountUp(timestamp) {
     if (!startTime) startTime = timestamp;
     var progress = Math.min((timestamp - startTime) / duration, 1);
@@ -188,8 +196,30 @@ window.addEventListener('DOMContentLoaded', function() {
       el.textContent = target;
     }
   }
-  el.textContent = '0';
-  requestAnimationFrame(animateCountUp);
+
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function onScrollOrLoad() {
+    if (!hasAnimated && isElementInViewport(el)) {
+      hasAnimated = true;
+      el.textContent = '0';
+      requestAnimationFrame(animateCountUp);
+      window.removeEventListener('scroll', onScrollOrLoad);
+      window.removeEventListener('resize', onScrollOrLoad);
+    }
+  }
+
+  window.addEventListener('scroll', onScrollOrLoad);
+  window.addEventListener('resize', onScrollOrLoad);
+  onScrollOrLoad(); // Check on load
 });
 </script>
 </body>

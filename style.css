@@ -31,6 +31,7 @@ body, button, input, select, textarea, a, h1, h2, h3, h4, h5, h6, p, .nav-btn, .
   display: flex;
   align-items: center;
   justify-content: center;
+  filter: brightness(1.15) saturate(0.6); /* Lighten and desaturate the wood header image */
 }
 
 .header-content {
@@ -48,6 +49,7 @@ body, button, input, select, textarea, a, h1, h2, h3, h4, h5, h6, p, .nav-btn, .
   height: 320px;
   object-fit: contain;
   margin-bottom: 18px;
+  filter: brightness(.72) saturate(2);
 }
 
 .nav-buttons {
@@ -128,6 +130,21 @@ body {
   font-size: 1.2rem;
   gap: 18px;
   margin-bottom: 0; /* Remove gap between .home-info and .services-summary */
+  text-align: center;
+  margin: 0 auto;
+  max-width: 700px;
+  box-shadow: 0 4px 24px 0 #fff;
+}
+
+.home-info p {
+  font-weight: 400 !important;
+}
+
+@media (max-width: 600px) {
+  .home-info {
+    padding: 0 12px;
+    max-width: 100%;
+  }
 }
 
 .contact-btn {
@@ -767,15 +784,18 @@ html {
 }
 .bottom-banner-services {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  flex-direction: column;
+  gap: 0.5rem;
   justify-content: center;
-  font-size: 1.08rem;
-  font-weight: 700;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 350;
   letter-spacing: 0.5px;
-  color: #fff;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
 }
 .bottom-banner-services span {
+  display: block;
   border-radius: 5px;
   padding: 6px 18px;
   margin: 0 2px;
@@ -1342,5 +1362,40 @@ html {
   .contact {
     max-width: 98vw;
     padding: 1.2rem 0.2rem;
+  }
+}
+
+#business-motto p {
+  font-weight: 400 !important;
+}
+
+/* --- Site-wide Bottom Banner Styles --- */
+.bottom-banner-nav a {
+  color: #2b6cb0 !important;
+  background: none !important;
+  border: none !important;
+  font-weight: 700;
+  font-size: 1.22rem;
+  text-decoration: none;
+  transition: color 0.18s, background 0.18s;
+  padding: 10px 34px;
+  border-radius: 6px;
+  margin: 0 4px;
+  display: inline-block;
+}
+.bottom-banner-nav a:hover {
+  text-decoration: underline;
+  color: #23497c !important;
+}
+@media (max-width: 600px) {
+  .bottom-banner-nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .bottom-banner-nav a {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 1.18rem;
   }
 }
