@@ -31,7 +31,7 @@ body, button, input, select, textarea, a, h1, h2, h3, h4, h5, h6, p, .nav-btn, .
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: brightness(1.15) saturate(0.6); /* Lighten and desaturate the wood header image */
+  filter: brightness(1.15) saturate(0.4); /* Lighten and desaturate the wood header image */
 }
 
 .header-content {
@@ -45,11 +45,11 @@ body, button, input, select, textarea, a, h1, h2, h3, h4, h5, h6, p, .nav-btn, .
 }
 
 .logo {
-  width: 320px;
-  height: 320px;
+  width: 420px;
+  height: 420px;
   object-fit: contain;
-  margin-bottom: 18px;
-  filter: brightness(.72) saturate(2);
+  margin-bottom: -150px;
+  filter: brightness(.72) saturate(2.5);
 }
 
 .nav-buttons {
@@ -62,7 +62,7 @@ body, button, input, select, textarea, a, h1, h2, h3, h4, h5, h6, p, .nav-btn, .
   background: none;
   border-radius: 0;
   box-shadow: none;
-  padding: 10px;
+  padding: 50px;
   margin-top: 8px;
 }
 
@@ -628,17 +628,18 @@ hr {
 @media (max-width: 600px) {
   /* --- Clean, Flat Banner Navigation (Mobile) --- */
   .logo {
-    width: 180px !important;
-    height: 180px !important;
-    margin-bottom: 12px !important;
+    width: 300px !important;
+    height: 300px !important;
+    margin-bottom: -75px !important;
+    margin-top: -75px !important;
   }
   .nav-buttons {
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
-    gap: 0.5rem !important;
-    margin-top: 8px !important;
+    gap: 0rem !important;
+    margin-top: 0px !important;
     background: none !important;
     box-shadow: none !important;
     border-radius: 0 !important;
