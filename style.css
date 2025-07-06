@@ -48,7 +48,7 @@ body, button, input, select, textarea, a, h1, h2, h3, h4, h5, h6, p, .nav-btn, .
   width: 420px;
   height: 420px;
   object-fit: contain;
-  margin-bottom: -150px;
+  margin-bottom: 0px;
   filter: brightness(.72) saturate(2.5);
 }
 
@@ -62,7 +62,7 @@ body, button, input, select, textarea, a, h1, h2, h3, h4, h5, h6, p, .nav-btn, .
   background: none;
   border-radius: 0;
   box-shadow: none;
-  padding: 50px;
+  padding: 0px;
   margin-top: 8px;
 }
 
@@ -630,8 +630,8 @@ hr {
   .logo {
     width: 300px !important;
     height: 300px !important;
-    margin-bottom: -75px !important;
-    margin-top: -75px !important;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
   }
   .nav-buttons {
     flex-direction: column !important;
@@ -658,7 +658,7 @@ hr {
     font-size: 1.3rem !important;
     padding: 8px 32px !important;
     margin: 0 2px !important;
-    border-radius: 5px !important;
+    border-radius: 0px !important;
     background-color: rgba(136, 136, 136, 0.45) !important;
     color: #fff !important;
     border: none !important;
