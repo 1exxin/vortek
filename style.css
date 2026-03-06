@@ -13,14 +13,14 @@ body, button, input, select, textarea, a, h1, h2, h3, h4, h5, h6, p, .nav-btn, .
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  width: 100vw;
+  width: 100%;
   margin: 0;
   padding: 0;
   box-shadow: 0 2px 16px rgba(44,62,80,0.08);
 }
 
 .main-header-image {
-  width: 100vw;
+  width: 100%;
   max-width: none;
   height: 320px; /* Reduced height */
   background: url('https://images.pexels.com/photos/326333/pexels-photo-326333.jpeg?cs=srgb&dl=pexels-pixabay-326333.jpg&fm=jpg') center/cover no-repeat;
@@ -117,7 +117,7 @@ body {
 }
 
 .home-info {
-  width: 100vw;
+  width: 100%;
   max-width: none;
   background: #fff;
   color: #222;
@@ -221,7 +221,7 @@ body {
   max-width: 1200px;
   padding: 0 16px;
   background: #1a202c;
-  width: 100vw;
+  width: 100%;
   max-width: none;
   margin: 0;
   border-radius: 0;
@@ -283,7 +283,39 @@ body {
   color: #fff;
 }
 
-/* Hide Glide.js bullets (dots) and any stray list markers */
+/* --- Glide Carousel Centering Fix --- */
+#renovations-carousel,
+#remediation-carousel {
+  max-width: 900px;
+  margin: 32px auto 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.glide__track {
+  overflow: hidden;
+}
+
+.glide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  list-style: none !important;
+}
+
+/* Inside carousel, let the placeholder fill the slide fluidly */
+.glide__slide .service-img-placeholder {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
+
 .glide__bullets,
 .glide__bullet {
   display: none !important;
@@ -712,6 +744,7 @@ hr {
   border-radius: 0px;
   padding: 2.5rem 2rem;
   box-shadow: 0 2px 12px rgb(255, 255, 255);
+  overflow: visible;
 }
 
 body > .services-nav {
@@ -724,6 +757,7 @@ body > .services-nav {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 #scrollToTopBtn {
@@ -753,7 +787,7 @@ html {
 
 /* --- Site-wide Bottom Banner Styles --- */
 .site-bottom-banner {
-  width: 100vw;
+  width: 100%;
   background: #1a202c;
   color: #fff;
   padding: 2.2rem 0 1.2rem 0;
@@ -870,8 +904,8 @@ html {
   border-top: 2px solid #e2e8f0;
   border-bottom: 2px solid #e2e8f0;
   margin: 0 auto;
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
